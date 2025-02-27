@@ -1,0 +1,15 @@
+Alice 11.3 9.3 
+Bob 16.7 5.1 
+Charlie 7.8 18.9 
+David 10.6 15.9 
+Eva 16.9 5.9 
+Frank 1.9 12.7 
+Grace 17.6 4.8 
+Hank 0.7 12.1 
+Ivy 8.7 8.6 
+Jack 19.2 1.4 
+Kathy 17.5 3.4 
+Leo 11.6 11.4 
+Mia 7.2 8.5 
+Nina 1.9 1.4 
+Oscar 19.3 14.9 

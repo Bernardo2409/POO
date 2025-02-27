@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ex1 {
 
     public static void main(String[] args) {
-
+        int soma = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Insere um número: ");
         int numero = sc.nextInt();
@@ -18,8 +18,14 @@ public class Ex1 {
             }
 
         }
+        System.out.println("O número primos menores que o valor inserido são: ");
+        for (int j = 0; j < lista.size(); j++) {
+            System.out.printf("%d ", lista.get(j));
+            soma += j;
 
-        System.out.println(lista);
+        }
+
+        System.out.println("\nA soma dos números primos é: " + soma);
 
         sc.close();
     }

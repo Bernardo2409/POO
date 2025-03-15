@@ -1,14 +1,12 @@
 package aula03;
 import java.util.Scanner;
-import java.util.Random;
 
 public class Ex2 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Random random = new Random();
 
-        int adivinha = random.nextInt(100) +1;
+        int adivinha = (int) (100 * Math.random()) +1;
         
         
         System.out.println("Adivinha o número: ");
@@ -20,7 +18,7 @@ public class Ex2 {
             numero = sc.nextInt();
 
             if(numero < adivinha) { 
-                variacao = "é maior";
+                variacao = "é Maior!";
             }
             else if( numero > adivinha) {
                 variacao = "é menor";

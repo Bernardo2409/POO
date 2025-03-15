@@ -8,21 +8,32 @@ public class Ex1 {
         int soma = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Insere um número: ");
-        int numero = sc.nextInt();
+        int numero = 0;
+
+        while (true) {
+            System.out.println("Insere um número inteiro positivo maior que 1: ");
+            if (sc.hasNextInt()) {
+                numero = sc.nextInt();
+                if (numero > 1) {
+                    break;
+                } else {
+                    System.out.println("Número inválido. Tente novamente.");
+                }
+            } else {
+                System.out.println("Entrada inválida. Tente novamente.");
+                sc.next(); // Limpar a entrada inválida
+            }
+        }
+
         ArrayList<Integer> lista = new ArrayList<Integer>();
 
 
         for (int i = 1; i < numero; i++) {
             if (isPrime(i)) {
                 lista.add(i);
+                soma += i;
+                System.out.printf("%d ", i);
             }
-
-        }
-        System.out.println("O número primos menores que o valor inserido são: ");
-        for (int j = 0; j < lista.size(); j++) {
-            System.out.printf("%d ", lista.get(j));
-            soma += j;
-
         }
 
         System.out.println("\nA soma dos números primos é: " + soma);

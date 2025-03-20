@@ -31,6 +31,7 @@ public class Ex1 {
         }
 
         public DateYMD getDataNasc() {
+
             return dataNasc;
         }
 
@@ -128,15 +129,15 @@ class Test {
                 new DateYMD(18, 7, 1990), new DateYMD(1, 9, 2018));
         Ex1.Professor p1 = ex1.new Professor("Jorge Almeida", 3467225,
                 new DateYMD(13, 3, 1967), "Associado", "Informática");
-        Ex1.Bolseiro bls = ex1.new Bolseiro("Igor Santos", 8976543,
+        Ex1.Bolseiro b = ex1.new Bolseiro("Igor Santos", 8976543,
                 new DateYMD(11, 5, 1985), p1, 900);
-        bls.setBolsa(1050);
+        b.setBolsa(1050);
 
         System.out.println("Aluno: " + al.getNome());
         System.out.println(al);
-        System.out.println("Bolseiro: " + bls.getNome() + ", NMec: "
-                + bls.getnMec() + ", Bolsa: " + bls.getBolsa() + ", Orientador: "
-                + bls.getOrientador().getNome());
-        System.out.println(bls);
+        System.out.println("Bolseiro: " + b.getNome() + ", NMec: "
+                + b.getnMec() + ", Bolsa: " + b.getBolsa() + ", Orientador: "
+                + b.getOrientador().getNome());
+        System.out.println(b);
     }
 }

@@ -3,7 +3,7 @@ import aula05.DateYMD;
 
 public class Ex1 {
 
-    public class Pessoa {
+    public static class Pessoa {
         private String nome;
         private int cc;
         private DateYMD dataNasc;
@@ -37,6 +37,11 @@ public class Ex1 {
 
         public void setDataNasc(DateYMD dataNasc) {
             this.dataNasc = dataNasc;
+        }
+
+        @Override
+        public String toString() {
+            return nome; 
         }
     }
 

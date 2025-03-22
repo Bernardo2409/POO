@@ -3,6 +3,7 @@ package aula06;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import aula05.DateYMD;
 import aula06.Ex1.Pessoa;
@@ -40,6 +41,10 @@ public class Ex2 {
         
         public String getTelemovel() {
             return telemovel;
+        }
+
+        public Pessoa getNome() {
+            return nome;
         }
         public void setTelemovel(String telemovel) {
             if (validTelemovel(telemovel)) {
@@ -103,14 +108,23 @@ public class Ex2 {
                     String nomePessoa = sc.nextLine();
                     System.out.println("Número de CC: ");
                     int cc = sc.nextInt();
-                    sc.nextLine(); // Consumir a linha vazia
+                    sc.nextLine(); 
                     System.out.println("Data de Nascimento (dd/mm/aaaa): ");
                     String dataNascStr = sc.nextLine();
-                    String[] dataNascParts = dataNascStr.split("/"); // Separar dia, mês e ano
+                    String[] dataNascParts = dataNascStr.split("/");
                     DateYMD dataNasc = new DateYMD(Integer.parseInt(dataNascParts[0]),
                                                     Integer.parseInt(dataNascParts[1]),
                                                     Integer.parseInt(dataNascParts[2]));
                     Pessoa pessoa = new Pessoa(nomePessoa, cc, dataNasc);
+                    boolean pessoaExiste = contactos.stream()
+                            .anyMatch(c -> c.getNome().equals(pessoa));
+                    if (pessoaExiste) {
+                        System.out.println("A pessoa já existe. Deseja continuar a inserir como novo contacto? (s/n)");
+                        String resposta = sc.nextLine();
+                        if (!resposta.equalsIgnoreCase("s")) {
+                            break;
+                        }
+                    }
                     System.out.println("Número de telemóvel: ");
                     String telemovel = sc.nextLine();
                     System.out.println("Endereço de email: ");
@@ -128,7 +142,7 @@ public class Ex2 {
                 case 2:
                     System.out.println("ID do contacto a alterar: ");
                     int idAlterar = sc.nextInt();
-                    sc.nextLine(); // Consume newline
+                    sc.nextLine(); 
                     Contacto contactoAlterar = contactos.stream()
                             .filter(c -> c.getId() == idAlterar)
                             .findFirst()
@@ -159,26 +173,76 @@ public class Ex2 {
             case 3:
                 System.out.println("ID do contacto a apagar: ");
                 int idApagar = sc.nextInt();
-                sc.nextLine(); // Consume newline
+                sc.nextLine(); 
                 contactos.removeIf(c -> c.getId() == idApagar);
                 System.out.println("Contacto apagado com sucesso!");
                 break;
 
             case 4:
-                System.out.println("ID do contacto a procurar: ");
-                int idProcurar = sc.nextInt();
-                sc.nextLine(); // Consume newline
-                Contacto contactoProcurar = contactos.stream()
-                        .filter(c -> c.getId() == idProcurar)
-                        .findFirst()
-                        .orElse(null);
+            System.out.println("Pesquisar por (1) Nome ou (2) Número de telemóvel?");
+            int criterio = sc.nextInt();
+            sc.nextLine(); 
+            List<Contacto> resultados = new ArrayList<>();
 
-                if (contactoProcurar != null) {
-                    System.out.println(contactoProcurar);
-                } else {
-                    System.out.println("Contacto não encontrado.");
-                }
+            if (criterio == 1) {
+                System.out.println("Digite o nome: ");
+                String nomePesquisa = sc.nextLine();
+                resultados = contactos.stream()
+                        .filter(c -> c.getNome().toString().equalsIgnoreCase(nomePesquisa))
+                        .collect(Collectors.toList());
+            } else if (criterio == 2) {
+                System.out.println("Digite o número de telemóvel: ");
+                String telemovelPesquisa = sc.nextLine();
+                resultados = contactos.stream()
+                        .filter(c -> c.getTelemovel().equals(telemovelPesquisa))
+                        .collect(Collectors.toList());
+            }
+
+            if (resultados.isEmpty()) {
+                System.out.println("Nenhum contacto encontrado.");
                 break;
+            }
+
+            System.out.println("Contactos encontrados:");
+            resultados.forEach(System.out::println);
+
+            System.out.println("Digite o ID do contacto que deseja alterar/apagar/procurar:");
+            int idEscolhido = sc.nextInt();
+            sc.nextLine(); 
+            Contacto contactoEscolhido = contactos.stream()
+                    .filter(c -> c.getId() == idEscolhido)
+                    .findFirst()
+                    .orElse(null);
+
+            if (contactoEscolhido == null) {
+                System.out.println("ID inválido.");
+                break;
+            }
+
+            if (opcao == 2) {
+                System.out.println("Novo número de telemóvel (deixe vazio para não alterar): ");
+                String novoTelemovel = sc.nextLine();
+                System.out.println("Novo email (deixe vazio para não alterar): ");
+                String novoEmail = sc.nextLine();
+
+                try {
+                    if (!novoTelemovel.isEmpty()) {
+                        contactoEscolhido.setTelemovel(novoTelemovel);
+                    }
+                    if (!novoEmail.isEmpty()) {
+                        contactoEscolhido.setEmail(novoEmail);
+                    }
+                    System.out.println("Contacto alterado com sucesso!");
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Erro: " + e.getMessage());
+                }
+            } else if (opcao == 3) { 
+                contactos.remove(contactoEscolhido);
+                System.out.println("Contacto apagado com sucesso!");
+            } else if (opcao == 4) { 
+                System.out.println(contactoEscolhido);
+            }
+            break;
 
             case 5:
                 System.out.println("Lista de contactos:");

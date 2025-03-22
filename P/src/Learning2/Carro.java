@@ -2,10 +2,13 @@ package Learning2;
 
 public class Carro {
 
+    // variáveis do carro
     private String marca;
     private String modelo;
     private int preco;
 
+
+    // construtor do carro
     public Carro(String marca, String modelo, int preco) {
 
         this.marca = marca;
@@ -14,6 +17,7 @@ public class Carro {
         
     }
 
+    //return do preço para a outra classe
     public double getPreco() {
         return preco;
     }
@@ -21,7 +25,7 @@ public class Carro {
 
 
 
-
+    // quando der print é só meter o nome da classe
     @Override
     public String toString() {
         return marca + " " + modelo + " - " + preco + " euros";

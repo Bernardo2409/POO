@@ -5,10 +5,13 @@ import java.util.List;
 
 public class Cliente {
 
+    //variaveis do cliente
     private String nome;
     private int contacto;
+    //array com os valores do carro
     private List<Carro> historicoCompras;
 
+    // Construtor do cliente
     public Cliente(String nome, int contacto) {
 
         if (!isValidContacto(contacto)) {
@@ -19,12 +22,12 @@ public class Cliente {
         this.historicoCompras = new ArrayList<>();
 
     }
-
+    //validação do contacto
     private boolean isValidContacto (int contacto) {
         String contactoStr = String.valueOf(contacto);
         return contactoStr.matches("9\\d{8}"); 
     }
-
+    
     public void setContacto(int contacto) {
         if (!isValidContacto(contacto)) {
             throw new IllegalArgumentException("Contacto inválido. Deve conter exatamente 9 dígitos.");

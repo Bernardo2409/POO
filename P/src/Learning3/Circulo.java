@@ -7,7 +7,9 @@ public class Circulo {
 
 
     public Circulo(int raio) {
-
+        if(raio < 0) {
+            throw new IllegalArgumentException("O raio deve ser maior que 0.");
+        }
         this.raio = raio;
 
     }

@@ -1,4 +1,4 @@
-package aula07;
+package aula07.Ex1;
 
 public class TesteFormas {
     public static void main(String[] args) {

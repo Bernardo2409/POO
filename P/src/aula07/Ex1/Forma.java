@@ -1,4 +1,4 @@
-package aula07;
+package aula07.Ex1;
 
 public abstract class Forma {
 

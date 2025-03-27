@@ -19,7 +19,7 @@ public class MainGaleria {
             opcao = sc.nextInt();
             switch (opcao) {
                 case 1:
-                    System.out.println("\n1. Adicionar uma obra do tipo");
+                    System.out.println("\n Adicionar uma obra do tipo");
                     System.out.println("1. Quadro");
                     System.out.println("2. Escultura");
                     System.out.println("3. Obra Digital (NFT)");
@@ -36,7 +36,7 @@ public class MainGaleria {
                             System.out.println("Preço do Quadro?");
                             int precoq = sc.nextInt();
                             System.out.println("Tinta do Quadro?");
-                            String tintaq = sc.nextLine();
+                            String tintaq = stringc.nextLine();
                             System.out.println("O Quadro está emoldurado?");
                             char emolduradoq = sc.next().charAt(0);
                             System.out.println("Tamanho do Quadro?");
@@ -54,10 +54,10 @@ public class MainGaleria {
                             System.out.println("Preço da Escultura?");
                             int precoe = sc.nextInt();
                             System.out.println("Material da Escultura?");   
-                            String materiae = sc.nextLine();
+                            String materiae = stringc.nextLine();
                             System.out.println("Quantos exemplares existem da Escultura?");
                             int exemplarese = sc.nextInt();
-                            Escultura nova_Escultura = new Escultura(tituloe, autore, precoe, precoe, materiae, exemplarese);
+                            Escultura nova_Escultura = new Escultura(tituloe, autore, precoe, materiae, exemplarese);
                             galeria.adicionarobras(nova_Escultura);
                             break;
                         case 3:
@@ -68,17 +68,32 @@ public class MainGaleria {
                             String autord = sc.nextLine();
                             System.out.println("Preço da ObraDigital");
                             int precod = sc.nextInt();
+                            System.out.println("Blockchain da obraDigital");
+                            String blockchaind = sc.nextLine();
+                            System.out.println("Endereço da obraDigital");
+                            String enderecod = sc.nextLine();
+                            ObraDigital nova_ObraDigital = new ObraDigital(titulod, autord, precod, blockchaind, enderecod);
+                            galeria.adicionarobras(nova_ObraDigital);
                             break;
                     }
                     break;
                 case 2:
                     // Listar as obras
+                    galeria.listarobras(); 
                     break;
                 case 3:
                     // Vender uma obra
+                    System.out.println("Qual a obra que queres vender?(Id)");
+                    int id = sc.nextInt();
+                    System.out.println("Preço de venda?");
+                    int precovenda = sc.nextInt();
+
+                    galeria.venderobras(id, precovenda);
+                    
                     break;
                 case 4:
                     // Apresentar o lucro total
+                    galeria.lucro();
                     break;
                 case 5:
                     System.out.println("5. Sair");

@@ -19,38 +19,23 @@ abstract class Obra {
 
     }
 
+
+    public abstract String detalhes();
+
     public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
     public int getPreco() {
-        if (preco > 0) {}
         return preco;
     }
 
-    public void setPreco(int preco) {
-        this.preco = preco;
-    }
 
     public int getId() {
         return id;
     }
 
     
-
-
 }
 
 class Quadro extends Obra {
@@ -68,8 +53,14 @@ class Quadro extends Obra {
     }
 
     @Override
+    public String detalhes() {
+        return getId() + "Quadro: " + titulo + ", autor: " + autor + ", tinta: " + tinta + ", emoldurado: " + emoldurado + ", tamanho: " + tamanho;
+    }
+
+    @Override
     public String toString() {
-        return "Foi adicionado a obra: " + titulo + ", autor: " + autor + ", tinta: " + tinta + ", emoldurado: " + emoldurado + ", tamanho: " + tamanho;
+
+        return titulo;
     }
     
 }
@@ -78,12 +69,22 @@ class Escultura extends Obra {
     private String material;
     private int exemplares;
 
-    public Escultura(String titulo, String autor, int preco, int id, String material, int exemplares) {
+    public Escultura(String titulo, String autor, int preco, String material, int exemplares) {
         super(titulo, autor, preco);
 
         this.material = material;
         this.exemplares = exemplares;
 
+    }
+    @Override
+    public String detalhes() {
+        return "Escultura: " + titulo + ", autor: " + autor + ", material: " + material + ", exemplares: " + exemplares;
+    }
+
+    @Override 
+    public String toString() {
+
+        return titulo;
     }
 
 }
@@ -92,12 +93,22 @@ class ObraDigital extends Obra {
     private String blockchain;
     private String endereco;
 
-    public ObraDigital(String titulo, String autor, int preco, int id, String blockchain, String endereco) {
+    public ObraDigital(String titulo, String autor, int preco, String blockchain, String endereco) {
         super(titulo, autor, preco);
 
         this.blockchain = blockchain;
         this.endereco = endereco;
 
 
+    }
+
+    @Override
+    public String detalhes() {
+        return "ObraDigital: " +titulo + ", autor: " + autor + ", blockchain: " + blockchain + ", endereço: " + endereco;
+    }
+    @Override
+    public String toString() {
+
+        return titulo;
     }
 }

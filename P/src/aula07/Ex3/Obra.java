@@ -1,16 +1,16 @@
-package aula07.Ex2;
+package aula07.Ex3;
 
-public class Obra {
+abstract class Obra {
 
     //variáveis
-    private String titulo;
-    private String autor;
-    private int preco;
-    private int id;
-    private static int nextId = 33;
+    protected String titulo;
+    protected String autor;
+    protected int preco;
+    protected int id;
+    protected static int nextId = 33;
 
     //construtor
-    public Obra(String titulo, String autor, int preco, int id) {
+    public Obra(String titulo, String autor, int preco) {
 
         this.titulo = titulo;
         this.autor = autor;
@@ -36,6 +36,7 @@ public class Obra {
     }
 
     public int getPreco() {
+        if (preco > 0) {}
         return preco;
     }
 
@@ -47,10 +48,7 @@ public class Obra {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    
 
 
 }
@@ -58,29 +56,33 @@ public class Obra {
 class Quadro extends Obra {
 
     private String tinta;
-    private boolean emoldurado;
+    private char emoldurado;
     private String tamanho;
 
-    public Quadro(String titulo,String autor,int preco, int id, String tinta, boolean emoldurado, String tamanho) {
-        super(titulo, autor, preco, id);
-
+    public Quadro(String titulo,String autor,int preco,String tinta, char emoldurado, String tamanho) {
+        super(titulo, autor, preco);
         this.tinta = tinta;
         this.emoldurado = emoldurado;
         this.tamanho = tamanho;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Foi adicionado a obra: " + titulo + ", autor: " + autor + ", tinta: " + tinta + ", emoldurado: " + emoldurado + ", tamanho: " + tamanho;
     }
     
 }
 class Escultura extends Obra {
 
     private String material;
-    private int quantidade;
+    private int exemplares;
 
-    public Escultura(String titulo, String autor, int preco, int id, String material, int quantidade) {
-        super(titulo, autor, preco, id);
+    public Escultura(String titulo, String autor, int preco, int id, String material, int exemplares) {
+        super(titulo, autor, preco);
 
         this.material = material;
-        this.quantidade = quantidade;
+        this.exemplares = exemplares;
 
     }
 
@@ -91,7 +93,7 @@ class ObraDigital extends Obra {
     private String endereco;
 
     public ObraDigital(String titulo, String autor, int preco, int id, String blockchain, String endereco) {
-        super(titulo, autor, preco, id);
+        super(titulo, autor, preco);
 
         this.blockchain = blockchain;
         this.endereco = endereco;

@@ -5,6 +5,6 @@ public class MainDate{
         
         DateND date = new DateND(27, 3, 2025);
         int daysDifference = date.calculateDaysDifference(30, 3, 2025);
-        System.out.println("Diferença em dias: " + daysDifference);
+        System.out.println("Diferença de dias:  " + daysDifference);
     }
 }

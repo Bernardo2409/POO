@@ -4,44 +4,42 @@ class DateND extends DateYMD {
 
     int counter = 0;
     public DateND(int day, int month, int year) {
-        super(day, month, year); // Inicializa os valores na classe pai
+        super(day, month, year); 
     }
     
     public int compareDate(int day, int month, int year) {
         if (year > this.year) {
-            return 1; // A data de input é maior
+            return 1; 
         } else if (year < this.year) {
-            return -1; // A data de input é menor
+            return -1; 
         } else {
-            // Se os anos forem iguais, comparar os meses
             if (month > this.month) {
-                return 1; // A data de input é maior
+                return 1;
             } else if (month < this.month) {
-                return -1; // A data de input é menor
+                return -1; 
             } else {
-                // Se os meses forem iguais, comparar os dias
                 if (day > this.day) {
-                    return 1; // A data de input é maior
+                    return 1; 
                 } else if (day < this.day) {
-                    return -1; // A data de input é menor
+                    return -1; 
                 } else {
-                    return 0; // As datas são iguais
+                    return 0; 
                 }
             }
         }
     }
     public int calculateDaysDifference(int day, int month, int year) {
-        counter = 0; // Reinicia o contador
+        counter = 0; 
         while (compareDate(day, month, year) != 0) {
             if (compareDate(day, month, year) == -1) {
-                increment(); // Incrementa a data armazenada
-                counter++; // Incrementa o contador
+                increment(); 
+                counter++; 
             } else if (compareDate(day, month, year) == 1) {
-                decrement(); // Decrementa a data armazenada
-                counter++; // Incrementa o contador
+                decrement(); 
+                counter++; 
             }
         }
-        return counter; // Retorna a quantidade de dias de diferença
+        return counter; 
     }
     
 

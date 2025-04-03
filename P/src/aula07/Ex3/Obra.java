@@ -104,7 +104,7 @@ class ObraDigital extends Obra {
 
     @Override
     public String detalhes() {
-        return "ObraDigital: " +titulo + ", autor: " + autor + ", blockchain: " + blockchain + ", endereço: " + endereco;
+        return "ObraDigital: " + titulo + ", autor: " + autor + ", blockchain: " + blockchain + ", endereço: " + endereco;
     }
     @Override
     public String toString() {

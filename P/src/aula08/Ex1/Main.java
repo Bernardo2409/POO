@@ -9,12 +9,14 @@ public class Main {
         Motociclo mota1 = new Motociclo("AB-CD-12", "Kawasaki", "2", 40, "desportivo");
         Taxi taxi1 = new Taxi("AC-DB-22", "peugeot", "2008", 50, 1, 4, 50);
         mota1.trajeto(30);
+        taxi1.trajeto(50);
 
         empresa1.adicionarVeiculo(mota1);
         empresa1.adicionarVeiculo(taxi1);
 
         empresa1.listarVeiculos();
 
+        System.out.println(empresa1.veiculo_menos_km());
 
 
 

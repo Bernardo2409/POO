@@ -135,6 +135,16 @@ class PesadoPassageiros extends Veiculo {
 
 }
 
+class AutomovelEletrico extends AutomovelLigeiro {
+    
+    public AutomovelEletrico ( String matricula, String marca, String modelo, int potencia, int numero_quadro, int capacidade_bagageira) {
+
+        super(matricula, marca, modelo, potencia, numero_quadro, capacidade_bagageira);
+
+    }
+
+}
+
 
 
 

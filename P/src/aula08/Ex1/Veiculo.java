@@ -70,8 +70,8 @@ class Motociclo extends Veiculo {
 }
 class AutomovelLigeiro extends Veiculo {
 
-    private int numero_quadro;
-    private int capacidade_bagageira;
+    protected int numero_quadro;
+    protected int capacidade_bagageira;
 
     public AutomovelLigeiro ( String matricula, String marca, String modelo, int potencia, int numero_quadro, int capacidade_bagageira) {
 
@@ -135,12 +135,42 @@ class PesadoPassageiros extends Veiculo {
 
 }
 
-class AutomovelEletrico extends AutomovelLigeiro {
+class AutomovelEletrico extends AutomovelLigeiro implements IGestaoBateria {
+
+    private double carga;
+    private double limiteCargaMax = 100.0;
     
     public AutomovelEletrico ( String matricula, String marca, String modelo, int potencia, int numero_quadro, int capacidade_bagageira) {
 
         super(matricula, marca, modelo, potencia, numero_quadro, capacidade_bagageira);
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.potencia = potencia;
+        this.numero_quadro = numero_quadro;
+        this.capacidade_bagageira = capacidade_bagageira;
+    
 
+    }
+
+    public double cargaDisponivel() {
+        return carga;
+    }
+
+    public void carregar(double percentagem) {
+        this.carga = Math.min(limiteCargaMax, this.carga + percentagem);
+    }
+
+    public void limitarCargaMaxima(double percentagem) {
+        this.limiteCargaMax = percentagem;
+        if (this.carga > limiteCargaMax) {
+            this.carga = limiteCargaMax;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " [Elétrico, carga=" + carga + "%]";
     }
 
 }

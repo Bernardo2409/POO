@@ -52,4 +52,12 @@ public class Prato implements Comparable<Prato> {
     public int hashCode() {
         return Objects.hash(nome, alimentos);
     }
+
+    public enum VariedadeCarne {
+        VACA, PORCO, PERU, FRANGO, OUTRA
+    }
+    
+    public enum TipoPeixe {
+        CONGELADO, FRESCO
+    }
 }

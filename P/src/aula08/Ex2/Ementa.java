@@ -40,12 +40,6 @@ public class Ementa {
         SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO, DOMINGO
     }
 
-    public enum VariedadeCarne {
-        VACA, PORCO, PERU, FRANGO, OUTRA
-    }
-
-    public enum TipoPeixe {
-        CONGELADO, FRESCO
-    }
+    
 
 }

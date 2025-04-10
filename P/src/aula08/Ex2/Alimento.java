@@ -2,6 +2,7 @@ package aula08.Ex2;
 
 import java.util.Objects;
 
+
 public class Alimento implements iAlimento {
 
     protected double proteinas;
@@ -49,9 +50,9 @@ public class Alimento implements iAlimento {
 
 class Carne extends Alimento {
 
-    private String variedade;
+    private VariedadeCarne variedade;
 
-    public Carne(double proteinas, double calorias, double peso, String variedade) {
+    public Carne (VariedadeCarne variedade, double proteinas, double calorias, double peso) {
 
         super( proteinas, calorias, peso);
         this.variedade = variedade;
@@ -65,11 +66,12 @@ class Carne extends Alimento {
     }
 }
 
+
 class Peixe extends Alimento {
 
-    private String variedade;
+    private VariedadePeixe variedade;
 
-    public Peixe(double proteinas, double calorias, double peso, String variedade) {
+    public Peixe(VariedadePeixe variedade, double proteinas, double calorias, double peso) {
 
         super(proteinas, calorias, peso);
         this.variedade = variedade;
@@ -82,12 +84,14 @@ class Peixe extends Alimento {
                getCalorias() + " cal, " + getProteinas() + "g prot";
     }
 
+    
+
 }
 class Cereal extends Alimento {
 
     private String nome;
 
-    public Cereal(double proteinas, double calorias, double peso, String nome) {
+    public Cereal(String nome, double proteinas, double calorias, double peso) {
 
         super(proteinas, calorias, peso);
         this.nome = nome;
@@ -103,7 +107,7 @@ class Legume extends Alimento {
 
     private String nome;
 
-    public Legume(double proteinas, double calorias, double peso, String nome) {
+    public Legume(String nome, double proteinas, double calorias, double peso) {
 
         super(proteinas, calorias, peso);
         this.nome = nome;

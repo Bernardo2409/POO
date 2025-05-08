@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Gradebook {
    
     private List<Student> students = new ArrayList<>();
@@ -17,15 +18,15 @@ public class Gradebook {
         try (BufferedReader reader = new BufferedReader(new FileReader(source))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split("\\|"); // Divide a linha pelo delimitador "|"
-                if (parts.length == 4) { // Verifica se há 4 partes: Nome + 3 Notas
+                String[] parts = line.split("\\|"); 
+                if (parts.length == 4) { 
                     String name = parts[0];
                     List<Double> grades = new ArrayList<>();
                     grades.add(Double.parseDouble(parts[1]));
                     grades.add(Double.parseDouble(parts[2]));
                     grades.add(Double.parseDouble(parts[3]));
-                    Student student = new Student(name, grades); // Cria um novo objeto Student
-                    addStudent(student); // Adiciona o estudante ao Gradebook
+                    Student student = new Student(name, grades); 
+                    addStudent(student); 
                 } else {
                     System.err.println("Linha inválida no ficheiro: " + line);
                 }

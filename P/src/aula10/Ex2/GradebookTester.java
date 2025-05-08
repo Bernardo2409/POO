@@ -2,6 +2,7 @@
 
     import java.util.List;
     import java.util.ArrayList;
+import java.util.Arrays;
 
     public class GradebookTester {
         public static void main(String[] args) {
@@ -12,7 +13,7 @@
             gradebook.load("src/aula10/Ex2/alunos.txt");
 
             // Add a new student to the collection
-            Student newStudent = new Student("Johny May", new ArrayList<>(List.of(10.0, 15.0, 19.0)));
+            Student newStudent = new Student("Johny May", new ArrayList<>(Arrays.asList(10.0, 15.0, 19.0)));
             gradebook.addStudent(newStudent);
 
             // Remove a student from the collection

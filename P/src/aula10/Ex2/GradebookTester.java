@@ -1,8 +1,7 @@
     package aula10.Ex2;
 
-    import java.util.List;
     import java.util.ArrayList;
-import java.util.Arrays;
+    import java.util.Arrays;
 
     public class GradebookTester {
         public static void main(String[] args) {
@@ -10,7 +9,7 @@ import java.util.Arrays;
             Gradebook gradebook = new Gradebook();
 
             // Load the student data from a text file
-            gradebook.load("src/aula10/Ex2/alunos.txt");
+            gradebook.load("D:/UA/1ano/2 semestre/POO/P/src/aula10/Ex2/alunos.txt");
 
             // Add a new student to the collection
             Student newStudent = new Student("Johny May", new ArrayList<>(Arrays.asList(10.0, 15.0, 19.0)));

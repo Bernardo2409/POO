@@ -25,6 +25,8 @@
             double averageGrade = gradebook.calculateAverageGrade("John Doe");
             System.out.println("Average grade for John Doe: " + averageGrade);
 
+            System.out.println(student);
+
             // Print a summary of all students in the collection
             gradebook.printAllStudents();
         }

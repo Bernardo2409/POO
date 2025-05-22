@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class Contact {
 
     private static int nextId = 1;
+    private int id;
     private String name;
     private int phone;
     private String email;
@@ -15,16 +16,16 @@ public class Contact {
         this.phone = phone;
         this.email = email;
         this.birthDate = birthDate;
-        nextId ++;
+        this.id = nextId++;
     }
 
 
 
     @Override
-public String toString() {
-    return "Contact " + ", Name = " + name + ", Phone number = " + phone +
-           ", email = " + email + ", BirthDate = " + birthDate + "]";
-}
+    public String toString() {
+        return "Contact " + ", Name = " + name + ", Phone number = " + phone +
+            ", email = " + email + ", BirthDate = " + birthDate + "]";
+    }
 
 
 
@@ -71,7 +72,7 @@ public String toString() {
     }
 
     public int getId() {
-        return nextId;
+        return id;
     }
 
 

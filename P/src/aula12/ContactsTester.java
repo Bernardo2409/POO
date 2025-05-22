@@ -24,12 +24,12 @@ public class ContactsTester {
         System.out.println(cm.calculateContactCost(5)); // -- não existe!
         // --------------------------
 
-       // c1.call(3.5);
-        // c2.email();
+        c1.call(3.5);
+        c2.email();
         cm.printAllContacts();
         // --------------------------
 
-        cm.readFile("contatos.txt");
+        cm.readFile("D:\\UA\\1ano\\2 semestre\\POO\\P\\src\\aula12\\contatos.txt");
         cm.printAllContacts();
         // --------------------------
 

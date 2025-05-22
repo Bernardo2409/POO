@@ -45,10 +45,11 @@ public class ContactManager implements IContactCostCalculator {
         double units = 1; 
         ContactType type = ContactType.CELLNUMBER;
 
-        if (ContactType.CELLNUMBER == type) {
+        if (ContactType.CELLNUMBER == type) { //telemovel
+            
             return 0.10 * units;
 
-        } else {
+        } else { //email
 
             return 0.0;
         }

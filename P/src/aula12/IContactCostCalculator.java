@@ -1,3 +1,5 @@
+package aula12;
+
 public interface IContactCostCalculator {
     public static enum ContactType {
         CELLNUMBER, EMAIL

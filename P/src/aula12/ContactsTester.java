@@ -1,10 +1,16 @@
+package aula12;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class ContactsTester {
     public static void main(String[] args) {
         ContactManager cm = new ContactManager();
 
         // --------------------------
-        Contact c1 = new Contact("Maria Joaquina", 911234567, "joaquina@ua.pt", "1985-01-01");      
-        Contact c2 = new Contact("João Miguel", 911234568, "joao@ua.pt", "1988-01-01");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        Contact c1 = new Contact("Maria Joaquina", 911234567, "joaquina@ua.pt", LocalDate.parse("1985-01-01", formatter));      
+        Contact c2 = new Contact("João Miguel", 911234568, "joao@ua.pt",LocalDate.parse("1988-01-01", formatter));
         cm.addContact(c1);
         cm.addContact(c2);
         cm.printAllContacts();
@@ -18,8 +24,8 @@ public class ContactsTester {
         System.out.println(cm.calculateContactCost(5)); // -- não existe!
         // --------------------------
 
-        c1.call(3.5);
-        c2.email();
+       // c1.call(3.5);
+        // c2.email();
         cm.printAllContacts();
         // --------------------------
 

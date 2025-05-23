@@ -5,6 +5,14 @@ import java.time.LocalDate;
 
 public class ContactManager implements IContactCostCalculator {
 
+    private StandardCostCalculator calculator = new StandardCostCalculator();
+    
+    @Override
+    public double calculateCost(double value, IContactCostCalculator.ContactType type) {
+        return calculator.calculateCost(value, type);
+    }
+    
+
     ArrayList<Contact> contacts = new ArrayList<>();   
 
     public void addContact( Contact c) {
@@ -31,30 +39,27 @@ public class ContactManager implements IContactCostCalculator {
         return null;
     }
 
+    
+
+    public void call(int id, double minutes) {
+        Contact c = getContact(id);
+        if (c != null) c.addCallMinutes(minutes);
+    }
+
+    public void sendEmail(int id) {
+        Contact c = getContact(id);
+        if (c != null) c.addEmail();
+    }
+
     public double calculateContactCost(int id) {
-        
-        if (getContact(id) == null) {
-            return -1;
-        } else {
-            return StandardCostCalculator();
-        }
-    }
+        Contact c = getContact(id);
+        if (c == null) return -1;
+        double cost = 0;
+        cost += calculator.calculateCost(c.getCallMinutes(), IContactCostCalculator.ContactType.CELLNUMBER);
+        cost += calculator.calculateCost(c.getEmailsSent(), IContactCostCalculator.ContactType.EMAIL);
+    return cost;
+}
 
-    public double StandardCostCalculator() {
-
-        double units = 1; 
-        ContactType type = ContactType.CELLNUMBER;
-
-        if (ContactType.CELLNUMBER == type) { //telemovel
-            
-            return 0.10 * units;
-
-        } else { //email
-
-            return 0.0;
-        }
-
-    }
 
     public void printAllContacts() {
 
@@ -76,7 +81,6 @@ public class ContactManager implements IContactCostCalculator {
                     String email = parts[2];
                     LocalDate birthDate = LocalDate.parse(parts[3]);
                     Contact c = new Contact(name, phone, email, birthDate);
-                    addContact(c);
                     addContact(c);
                 }
             }

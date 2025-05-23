@@ -10,6 +10,9 @@ public class Contact {
     private int phone;
     private String email;
     private LocalDate birthDate;
+    private double callMinutes;
+    private int emailsSent;
+
     
     public Contact(String name, int phone, String email, LocalDate birthDate) {
         this.name = name;
@@ -17,6 +20,8 @@ public class Contact {
         this.email = email;
         this.birthDate = birthDate;
         this.id = nextId++;
+        this.callMinutes = 0;
+        this.emailsSent = 0;
     }
 
 
@@ -119,6 +124,31 @@ public class Contact {
 
     public void setData_nascimento(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public void addCallMinutes(double minutes) { 
+    
+        this.callMinutes += minutes;    
+    }
+    public void addEmail() { 
+
+        this.emailsSent++; 
+    }
+
+    public double getCallMinutes() {
+        return this.callMinutes;
+    }
+
+    public int getEmailsSent() {
+        return this.emailsSent;
+    }
+
+    public void call(double minutes) {
+        addCallMinutes(minutes);
+    }
+
+    public void email() {
+        addEmail();
     }
 
 

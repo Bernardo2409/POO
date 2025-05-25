@@ -1,6 +1,6 @@
 package Learning7;
 
-public class Bicicleta extends Veiculo implements IManual{
+public class Bicicleta extends Veiculo{
 
     public Bicicleta() {
         super();
@@ -12,9 +12,6 @@ public class Bicicleta extends Veiculo implements IManual{
         this.totalKm += km;
     }
 
-    public void pedalar(double km) {
-        totalKm += km;
-    }
 
     
 }

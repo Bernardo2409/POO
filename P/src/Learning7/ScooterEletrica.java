@@ -14,7 +14,6 @@ public class ScooterEletrica extends Veiculo implements IEletrico {
         return bateria;
     }
 
-    @Override
     public void mover(double km) {
         if (bateria <= 0) {
             System.out.println("Bateria descarregada!");

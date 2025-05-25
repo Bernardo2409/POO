@@ -1,6 +1,5 @@
 package Learning7;
 
-import java.util.*;
 
 public class Tester {
 
@@ -22,13 +21,16 @@ public class Tester {
 
         // Simular deslocações
         scooter1.mover(5);   // Scooter anda 5 km → consome bateria
-        bicicleta1.mover(10); // Bicicleta anda 10 km → só aumenta km
+        scooter2.mover(10);
+
+        bicicleta1.mover(15); // Bicicleta anda 10 km → só aumenta km
 
         // Carregar uma scooter
         if (scooter1 instanceof IEletrico) {
             ((IEletrico) scooter1).carregar();
         }
 
+        
         // Mostrar estatísticas da frota
         System.out.println("=== Estatísticas da Frota ===");
         gestor.mostrarEstatisticas();
@@ -36,6 +38,10 @@ public class Tester {
         // Ver nível de bateria
         if (scooter1 instanceof IEletrico) {
             System.out.println("Bateria da " + scooter1.getId() + ": " + ((IEletrico) scooter1).getNivelBateria() + "%");
+        }
+
+        if (scooter2 instanceof IEletrico) {
+            System.out.println("Bateria da " + scooter2.getId() + ": " + ((IEletrico) scooter2).getNivelBateria() + "%");
         }
     }
 }

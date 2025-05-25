@@ -1,13 +1,12 @@
 package Learning7;
 
-public class ScooterEletrica extends Veiculo implements IEletrico{
+public class ScooterEletrica extends Veiculo implements IEletrico {
 
     private int bateria;
 
-    public ScooterEletrica(String id) {
-        super(id);
+    public ScooterEletrica() {
+        super();
         this.bateria = 100;
-        
     }
 
     @Override
@@ -31,12 +30,11 @@ public class ScooterEletrica extends Veiculo implements IEletrico{
         bateria = 100;
     }
 
+    @Override
     public void consumirEnergia(double km) {
         double consumo = km * 2; // 2% por km
         bateria -= consumo;
         if (bateria < 0) bateria = 0;
         totalKm += km;
     }
-
-    
 }

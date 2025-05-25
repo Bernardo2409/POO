@@ -2,8 +2,8 @@ package Learning7;
 
 public class Bicicleta extends Veiculo implements IManual{
 
-    public Bicicleta(String id) {
-        super(id);
+    public Bicicleta() {
+        super();
     }
 
 

@@ -1,13 +1,14 @@
 package Learning7;
 
-public abstract class Veiculo implements IStats{
+public abstract class Veiculo implements IStats {
 
-    private static int contador = 0;
+    private static int contador = 1;
+
     protected String id;
     protected double totalKm;
 
-    public Veiculo(String id) {
-        this.id = "V" + ++contador;
+    public Veiculo() {
+        this.id = "V" + contador++;
         this.totalKm = 0;
     }
 
@@ -21,3 +22,4 @@ public abstract class Veiculo implements IStats{
 
     public abstract void mover(double km);
 }
+

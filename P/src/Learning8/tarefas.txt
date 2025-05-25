@@ -1,0 +1,5 @@
+1;Acabar relatório de POO;HIGH;2025-05-20;2025-06-01;false
+2;Lavar a loiça;LOW;2025-05-10;2025-05-25;true
+3;Estudar Matemática Discreta;MEDIUM;2025-05-15;2025-06-10;false
+4;Renovar passe dos transportes;MEDIUM;2025-05-05;2025-05-31;true
+5;Enviar email ao professor;HIGH;2025-05-23;2025-05-26;false

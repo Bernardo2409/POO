@@ -1,10 +1,11 @@
 package Learning9.Ex1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class Empresa {
+public class Empresa{
 
-    private ArrayList<Veiculo> garagem;
+    private HashMap<Veiculo, Integer> garagem;
     private String nome;
     private String codigo_postal;
     private String email;
@@ -12,7 +13,7 @@ public class Empresa {
 
     public Empresa(String nome, String codigo_postal, String email) {
 
-        this.garagem = new ArrayList<>();
+        this.garagem = new HashMap<>();
         this.nome = nome;
         this.codigo_postal = codigo_postal;
         if (!email.matches("^[a-zA-Z0-9]{3,}@.+\\.com$")) {
@@ -21,6 +22,38 @@ public class Empresa {
         this.email = email;
     }
 
+    public void addVeiculo(Veiculo v) {
+
+        garagem.put(v, 0);
+
+    }
+
+
+    public void listarVeiculos() {
+
+        for (Veiculo veiculo : garagem.keySet()) {
+
+            System.out.println(veiculo);
+        } 
+
+    }
+
+    public Veiculo maisquilometros() {
+    Veiculo veiculoMax = null;
+    int maxKm = -1;
+
+    for (Veiculo v : garagem.keySet()) {
+        int km = v.distanciaTotal(); 
+        if (km > maxKm) {
+            maxKm = km;
+            veiculoMax = v;
+        }
+    }
+    return veiculoMax;  
+    }
+
+     
+    
 
     
 }

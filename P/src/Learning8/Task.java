@@ -14,6 +14,7 @@ public class Task {
     private LocalDate limit_date;
     private boolean state;
 
+    
     public enum Priority {
         LOW,
         MEDIUM,
@@ -107,4 +108,5 @@ public class Task {
             return null;
         }
     }
+
 }

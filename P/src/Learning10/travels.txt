@@ -1,0 +1,31 @@
+ID; Dias de Viagem; Local Inicio; Destino
+1; 23; Longjing, China; Lome, Togo
+2; 3; Shenzhen, China; Longjing, China
+3; 28; Taipei, Taiwan; Bogota, Colombia
+4; 11; Durban, South Africa; Munich, Germany
+5; 18; Stockholm, Sweden; Bangkok, Thailand
+6; 1; Hamburg, Germany; Berlin, Germany
+7; 24; Montreal, Canada; Bucharest, Romania
+8; 17; Jakarta, Indonesia; Barcelona, Spain
+9; 10; Dar es Salaam, Tanzania; Athens, Greece
+10; 28; Oslo, Norway; Istanbul, Turkey
+11; 5; Dublin, Ireland; Colombo, Sri Lanka
+12; 3; Fukuoka, Japan; Kyoto, Japan
+13; 4; Amsterdam, Netherlands; Nairobi, Kenya
+14; 12; Stuttgart, Germany; Hamburg, Germany
+15; 13; Brisbane, Australia; Santiago, Chile
+16; 15; Tehran, Iran; Guadalajara, Mexico
+17; 7; Auckland, New Zealand; Mumbai, India
+18; 25; Edmonton, Canada; Hanoi, Vietnam
+19; 16; Rome, Italy; Johannesburg, South Africa
+20; 12; Perth, Australia; Casablanca, Morocco
+21; 2; Seoul, South Korea; Kyoto, Japan
+22; 27; Helsinki, Finland; Rio de Janeiro, Brazil
+23; 21; Vancouver, Canada; Dhaka, Bangladesh
+24; 26; Calgary, Canada; San Francisco, USA
+25; 6; Zurich, Switzerland; Manila, Philippines
+26; 19; Vienna, Austria; Lima, Peru
+27; 9; Sydney, Australia; Belgrade, Serbia
+28; 22; San Francisco, USA; Osaka, Japan
+29; 14; Madrid, Spain; Karachi, Pakistan
+30; 6; Seattle, USA; Ho Chi Minh City, Vietnam

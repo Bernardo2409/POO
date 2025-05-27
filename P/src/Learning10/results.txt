@@ -1,0 +1,33 @@
+ID; Dias de Viagem; Local Inicio; Destino
+0; Aveiro, Portugal; Madrid, Spain; 5; 742.5
+1; Longjing, China; Lome, Togo; 23; 3450.0
+2; Shenzhen, China; Longjing, China; 3; 225.0
+3; Taipei, Taiwan; Bogota, Colombia; 28; 4200.0
+4; Durban, South Africa; Munich, Germany; 11; 1650.0
+5; Stockholm, Sweden; Bangkok, Thailand; 18; 2700.0
+6; Hamburg, Germany; Berlin, Germany; 1; 125.0
+7; Montreal, Canada; Bucharest, Romania; 24; 3600.0
+8; Jakarta, Indonesia; Barcelona, Spain; 17; 2550.0
+9; Dar es Salaam, Tanzania; Athens, Greece; 10; 1500.0
+10; Oslo, Norway; Istanbul, Turkey; 28; 3780.0
+11; Dublin, Ireland; Colombo, Sri Lanka; 5; 825.0
+12; Fukuoka, Japan; Kyoto, Japan; 3; 225.0
+13; Amsterdam, Netherlands; Nairobi, Kenya; 4; 675.0
+14; Stuttgart, Germany; Hamburg, Germany; 12; 600.0
+15; Brisbane, Australia; Santiago, Chile; 13; 1950.0
+16; Tehran, Iran; Guadalajara, Mexico; 15; 2250.0
+17; Auckland, New Zealand; Mumbai, India; 7; 1050.0
+18; Edmonton, Canada; Hanoi, Vietnam; 25; 3750.0
+19; Rome, Italy; Johannesburg, South Africa; 16; 2400.0
+20; Perth, Australia; Casablanca, Morocco; 12; 1620.0
+21; Seoul, South Korea; Kyoto, Japan; 2; 375.0
+22; Helsinki, Finland; Rio de Janeiro, Brazil; 27; 4050.0
+23; Vancouver, Canada; Dhaka, Bangladesh; 21; 3150.0
+24; Calgary, Canada; San Francisco, USA; 26; 3900.0
+25; Zurich, Switzerland; Manila, Philippines; 6; 975.0
+26; Vienna, Austria; Lima, Peru; 19; 2850.0
+27; Sydney, Australia; Belgrade, Serbia; 9; 1350.0
+28; San Francisco, USA; Osaka, Japan; 22; 3300.0
+29; Madrid, Spain; Karachi, Pakistan; 14; 2100.0
+30; Seattle, USA; Ho Chi Minh City, Vietnam; 6; 877.5
+31; Marselha, Franca; Helsinquia, Finlandia; 15; 2250.0

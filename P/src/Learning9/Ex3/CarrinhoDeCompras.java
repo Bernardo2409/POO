@@ -30,7 +30,7 @@ public class CarrinhoDeCompras implements Compra{
 
         for (Map.Entry<Produto, Integer> entry : carrinho.entrySet()) {
 
-            preco = entry.getKey().getPreco() * entry.getKey().getQuantidade();
+            preco = entry.getKey().getPreco() * entry.getValue();
             total += preco;
         }
 

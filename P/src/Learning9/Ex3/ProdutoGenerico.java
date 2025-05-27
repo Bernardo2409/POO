@@ -17,6 +17,7 @@ public class ProdutoGenerico implements Produto{
         return nome;
     }
 
+    @Override
     public double getPreco() {
 
         return preco;

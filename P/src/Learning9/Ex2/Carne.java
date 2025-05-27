@@ -11,7 +11,10 @@ public class Carne extends Alimento {
 
     
     
-
+    @Override
+    public String toString() {
+        return "Carne " + VariedadeCarne + ", Proteinas " + getProteinas() + ", calorias " + getCalorias() + ", Peso " + getPeso();
+    }
 
 
 

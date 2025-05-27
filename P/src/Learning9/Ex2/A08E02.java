@@ -17,7 +17,7 @@ public class A08E02 {
 					ingred++;
 				} else
 					System.out.println("\tERRO: não é possível adicionar Ingrediente " + ingred + ": " + aux);
-			} while (ingred < 3);
+			} while (ingred < 3); 
 
 			ementa.addPrato(pratos[i], Ementa.DiaSemana.values()[i]);
 		}

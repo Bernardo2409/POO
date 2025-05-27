@@ -7,5 +7,10 @@ public class Cereal extends AlimentoVegetariano{
     
     }
 
+    @Override
+    public String toString() {
+        return "Cereal " + getNome() + ", Proteinas " + getProteinas() + ", calorias " + getCalorias() + ", Peso " + getPeso();
+    }
+
 
 }

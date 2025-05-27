@@ -6,13 +6,20 @@ public class Prato implements Comparable<Prato>{
 
     private String nome;
     private ArrayList <Alimento> composicao;
-    private Ementa.DiaSemana diaSemana;
-    public int id = 1;
+    private static int nextId = 1;
+    private int id;
 
     public Prato(String nome) {
         this.nome = nome;
         this.composicao = new ArrayList<Alimento>();
-        this.id = id++;
+        this.id = nextId++;
+    }
+
+    
+
+    public int getId() {
+
+        return id;
     }
 
     // calorais totais
@@ -36,7 +43,6 @@ public class Prato implements Comparable<Prato>{
     }
 
 
-
     @Override
     public int compareTo(Prato outro) {
         double caloriasEste = this.caloriasTotais();
@@ -47,7 +53,7 @@ public class Prato implements Comparable<Prato>{
 
     @Override
     public String toString() {
-        return "Prato 'combinado n.'" + id +", composto por 0 ingredientes";
+        return "Prato 'combinado n.'" + getId() + ", composto por 0 ingredientes";
     }
 }
 

@@ -1,0 +1,5 @@
+ID; Dias de Viagem; Local Inicio; Destino
+0; Aveiro, Portugal; Madrid, Spain; 5; 742.5
+1; Dublin, Ireland; Cork, Ireland; 15; 750.0
+2; Denver, United States; Cork, Ireland; 15; 2250.0
+3; Marselha, Franca; Helsinquia, Finlandia; 15; 2250.0

@@ -1,6 +1,8 @@
 package Learning10;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import java.io.File;
@@ -67,33 +69,30 @@ public class TravelManager {
         }
     }
 
-    public void sortTravelsByCost(boolean nacional){
-        ITravelCostCalculator st = new StandardTravelCostCalculator();
-        List<Travel> filtered = new ArrayList<>();
+    public void sortTravelsByCost(boolean nacional) {
+    ITravelCostCalculator st = new StandardTravelCostCalculator();
+    List<Travel> filtered = new ArrayList<>();
 
-        for (Travel travel : travels) {
-            String[] initLocals = travel.getInitLocal().trim().split(", ");
-            String paisInit = initLocals[1];
-            String[] destLocals = travel.getDest().trim().split(", ");
-            String paisDest = destLocals[1];
+    for (Travel travel : travels) {
+        String[] initLocals = travel.getInitLocal().trim().split(", ");
+        String paisInit = initLocals[1];
+        String[] destLocals = travel.getDest().trim().split(", ");
+        String paisDest = destLocals[1];
 
-            if (nacional && paisInit.equals(paisDest)) {
-                filtered.add(travel);
-            } else if (!nacional && !paisInit.equals(paisDest)) {
-                filtered.add(travel);
-            }
+        if (nacional && paisInit.equals(paisDest)) {
+            filtered.add(travel);
+        } else if (!nacional && !paisInit.equals(paisDest)) {
+            filtered.add(travel);
         }
+    }   
 
-        filtered.sort((t1, t2) -> {
-            double c1 = st.calculateTravelCost(t1);
-            double c2 = st.calculateTravelCost(t2);
-            return Double.compare(c1, c2);
-        });
+    filtered.sort(Comparator.comparingDouble(st::calculateTravelCost));
 
-        for (Travel travel : filtered) {
-            System.out.println(travel + " | Custo: " + st.calculateTravelCost(travel));
-        }
+
+    for (Travel travel : filtered) {
+        System.out.println(travel + " | Custo: " + st.calculateTravelCost(travel));
     }
+}
 
     public void readFile(String fich){
         try{

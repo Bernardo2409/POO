@@ -54,6 +54,6 @@ public class Travel {
 
     @Override
     public String toString(){
-        return "Travel = {ID: "+ id+"; Local inicial: "+ initLocal + "; Local de destino: "+ dest +"; Duração: "+duration+ "}";
+        return "Travel = {ID: "+ id+"; Local inicial: "+ initLocal + "; Local de destino: "+ dest +"; Duração: "+ duration+ "}";
     }
 }

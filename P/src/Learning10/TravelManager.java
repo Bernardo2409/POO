@@ -94,6 +94,7 @@ public class TravelManager {
     }
 }
 
+    // LER O FICHEIRO
     public void readFile(String fich){
         try{
             Scanner sc = new Scanner(new File(fich));
@@ -107,6 +108,7 @@ public class TravelManager {
                 String dest = partes[3];
                 Travel t = new Travel(id, init, dest, dias);
 
+                // VERIFICAR SE EXISTE JÁ UM ID IGUAL
                 boolean found = false;
                 for (int i = 0; i < travels.size(); i++) {
                     if (travels.get(i).getId() == id) {
@@ -126,9 +128,11 @@ public class TravelManager {
         }
     }
 
+
     public void writeFile(String fich){
         ITravelCostCalculator st = new StandardTravelCostCalculator();
         try{
+            // STRINGBUILDER
             StringBuilder sb = new StringBuilder("ID; Dias de Viagem; Local Inicio; Destino\n");
             FileWriter fW = new FileWriter(fich);
             for (Travel travel : travels) {
@@ -142,3 +146,32 @@ public class TravelManager {
         }
     }
 }
+
+
+//SORT ORDEM CRESCENTE: pela duration, tem de se criar um getDuration();
+
+//COLLECTIONS: Collections.sort(travels, Comparator.comparingInt(Travel::getDuration));
+//ou
+//lambda: travels.sort((t1, t2) -> Integer.compare(t1.getDuration(), t2.getDuration()));
+
+
+//SORT ORDEM DECRESCENTE: pela duration 
+
+//travels.sort((t1, t2) -> Integer.compare(t2.getDuration(), t1.getDuration()));
+// ou:
+//travels.sort(Comparator.comparingInt(Travel::getDuration).reversed());
+
+
+//SORT NATURAL AO SER CRIADO UM OBJETO:
+
+//public class Travel implements Comparable<Travel> {
+    // ...
+
+//    @Override
+//    public int compareTo(Travel other) {
+//        return Integer.compare(this.duration, other.duration);
+//    }
+//}
+
+
+

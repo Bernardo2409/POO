@@ -37,7 +37,7 @@ public class TravelTester {
         System.out.println();
 
         // ----------------------------------------------------------
-        tm.readFile("travels.txt");
+        tm.readFile("D:\\UA\\1ano\\2 semestre\\POO\\P\\src\\Learning10\\travels.txt");
 
         Travel t4 = new Travel("Marselha, Franca", "Helsinquia, Finlandia", 15); //Testar ID depois de ler ficheiro
         tm.addTravel(t4);
@@ -53,7 +53,7 @@ public class TravelTester {
         System.out.println(tm.calculateTravelCost(30));
         // ----------------------------------------------------------
 
-        tm.writeFile("result.txt");
+        tm.writeFile("D:\\UA\\1ano\\2 semestre\\POO\\P\\src\\Learning10\\result.txt");
 
         // ----------------------------------------------------------
 

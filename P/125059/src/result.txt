@@ -1,0 +1,31 @@
+ID; Horas Trabalho; Descricao; Data e Hora
+1; 23.0; Construcao Parede  ; 2024-07-25T09:15
+2; 3.0; Pequena fuga de agua  ; 2024-08-20T09:20
+3; 28.0; Isolamento telhado  ; 2024-09-04T09:25
+4; 11.0; Pintura exterior  ; 2024-09-10T09:40
+5; 18.0; Construcao drenagens  ; 2024-09-19T09:45
+6; 1.0; Substituir louca lavabo  ; 2024-09-20T10:05
+7; 24.0; Construir marquise  ; 2024-09-23T10:25
+8; 17.0; Construir novo acesso  ; 2024-09-25T10:35
+9; 10.0; Alargar porta  ; 2024-10-09T10:50
+10; 28.0; Construir anexo  ; 2024-10-30T12:05
+11; 5.0; Instalar relvado  ; 2024-12-18T12:15
+12; 3.0; Desentupir canalizacao  ; 2025-01-09T12:25
+13; 4.0; Instaçacao maquina com torneiras  ; 2025-01-10T13:05
+14; 12.0; Instalar mosaico interior  ; 2025-01-14T13:15
+15; 13.0; Construir chamine  ; 2025-01-15T13:25
+16; 15.0; Substituir banheira  ; 2025-02-18T13:45
+17; 7.0; Instalacao parquet  ; 2025-04-09T14:05
+18; 25.0; Construcao cozinha  ; 2025-04-10T14:50
+19; 16.0; Construcao armarios quarto  ; 2025-04-14T15:10
+20; 12.0; Instalacao eletrica loja  ; 2025-04-16T15:15
+21; 2.0; Mudar lampada inacessivel  ; 2025-04-25T15:25
+22; 27.0; Supressao parede, reconstrucao de divisoes  ; 2025-05-07T15:45
+23; 21.0; Construcao jardim com zona repouso  ; 2025-05-08T16:00
+24; 26.0; Construcao piscina  ; 2025-05-22T16:25
+25; 6.0; Pintura interior  ; 2025-05-28T16:50
+26; 19.0; Instalacao AC  ; 2024-06-14T17:20
+27; 9.0; Instalacao paineis solares  ; 2024-06-19T17:30
+28; 22.0; Construcao cozinha  ; 2024-06-27T18:00
+29; 14.0; Pintura exterior  ; 2024-07-01T18:10
+30; 0.6; Substituir cobertura escoamento  ; 2024-07-09T19:00

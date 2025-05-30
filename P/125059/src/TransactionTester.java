@@ -27,7 +27,7 @@ public class TransactionTester {
         System.out.println("---------------");
 
         // ----------------------------------------------------------
-        tm.readFile("D:\\UA\\1ano\\2 semestre\\POO\\P\\125059\\src\\services.txt");
+        tm.readFile("services.txt");
         tm.printAllTransactions();
 
         // ----------------------------------------------------------
@@ -39,7 +39,7 @@ public class TransactionTester {
         System.out.println(tm.calculateTransactionCost(30));
         // ----------------------------------------------------------
 
-        tm.writeFile("D:\\UA\\1ano\\2 semestre\\POO\\P\\125059\\src\\result.txt");
+        tm.writeFile("result.txt");
 
         // ----------------------------------------------------------
 

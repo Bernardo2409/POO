@@ -1,3 +1,5 @@
+package aula10.ficheiros;
+
 import java.util.List;
 
 public class Student {

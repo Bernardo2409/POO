@@ -1,4 +1,4 @@
-package MiniTeste_2EduardoLaranjeiro126156;
+package MiniTeste_2Quartafeira;
 import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;

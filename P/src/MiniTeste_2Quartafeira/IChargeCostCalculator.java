@@ -1,4 +1,4 @@
-package MiniTeste_2EduardoLaranjeiro126156;
+package MiniTeste_2Quartafeira;
 
 public interface IChargeCostCalculator {
     double calculateChargeCost(Charge carga);

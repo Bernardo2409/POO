@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"Learning10",
+			"aula09/Ex2"
+		],
+		"java.project.outputPath": "bin",
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar"
+		],
+		"java.dependency.packagePresentation": "flat",
+		"java.dependency.syncWithFolderExplorer": true
+	}
+}

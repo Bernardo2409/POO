@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Ex1",
+            "request": "launch",
+            "mainClass": "aula04.Ex1",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Learning9.Ex1.Main",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "ContadorDePares",
+            "request": "launch",
+            "mainClass": "aula10.Ex1.ContadorDePares",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "Ex2",
+            "request": "launch",
+            "mainClass": "aula06.Ex2",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "TravelTester",
+            "request": "launch",
+            "mainClass": "Learning10.TravelTester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "ShoppingCartTester",
+            "request": "launch",
+            "mainClass": "Learning9.Ex3.ShoppingCartTester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "Tester",
+            "request": "launch",
+            "mainClass": "Learning7.Tester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Learning2.Main",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "ContactsTester",
+            "request": "launch",
+            "mainClass": "aula12.ContactsTester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "Ex3",
+            "request": "launch",
+            "mainClass": "aula06.Ex3",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "aula06.Test",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "ChargeTester",
+            "request": "launch",
+            "mainClass": "MiniTeste_2Quartafeira.ChargeTester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "TaskTester",
+            "request": "launch",
+            "mainClass": "Learning8.TaskTester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

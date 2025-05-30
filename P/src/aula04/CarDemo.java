@@ -1,3 +1,6 @@
+package aula04;
+
+
 import java.util.Scanner;
 
 class Car {

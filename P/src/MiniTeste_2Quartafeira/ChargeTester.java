@@ -1,4 +1,4 @@
-package MiniTeste_2EduardoLaranjeiro126156;
+package MiniTeste_2Quartafeira;
 
 public class ChargeTester {
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class ChargeTester {
         System.out.println("---------------");
 
         // ----------------------------------------------------------
-        cm.readFile("POO_refazer\\src\\MiniTeste_2EduardoLaranjeiro126156\\charges.txt");
+        cm.readFile("POO_refazer\\src\\MiniTeste_2Quartafeira\\charges.txt");
         cm.printAllCharges();
 
         // ----------------------------------------------------------

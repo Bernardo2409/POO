@@ -1,3 +1,5 @@
+package aula10.Ex1;
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;

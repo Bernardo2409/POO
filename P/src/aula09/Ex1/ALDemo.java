@@ -1,5 +1,4 @@
 package aula09.Ex1;
-import aula06.Ex1;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;

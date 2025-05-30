@@ -1,3 +1,5 @@
+package aula04;
+
 public class extraS {   //sem getters
  
     static class Country {

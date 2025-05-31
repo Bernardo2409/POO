@@ -39,11 +39,14 @@ public class ContactManager implements IContactCostCalculator {
         return null;
     }
 
-    
+
 
     public void call(int id, double minutes) {
         Contact c = getContact(id);
-        if (c != null) c.addCallMinutes(minutes);
+        if (c != null) 
+        {
+            c.addCallMinutes(minutes);
+        }
     }
 
     public void sendEmail(int id) {
@@ -71,9 +74,11 @@ public class ContactManager implements IContactCostCalculator {
     }
 
     public void readFile(String file) {
+        //try e catch para se a primeira linha não tiver os elementos certos
         try (java.io.BufferedReader br = new java.io.BufferedReader(new java.io.FileReader(file))) {
             String line;
-            while ((line = br.readLine()) != null) {
+            while ((line = br.readLine()) != null) {  //enquanto a linha do ficheiro nao for nula
+                //criar um array como em python
                 String[] parts = line.split("\t");
                 if (parts.length == 4) {
                     String name = parts[0];
@@ -103,6 +108,9 @@ public class ContactManager implements IContactCostCalculator {
             System.out.println("Error writing file: " + e.getMessage());
         }
     }
+
+
+
 
 
 

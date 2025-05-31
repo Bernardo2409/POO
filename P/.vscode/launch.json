@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Sort",
+            "request": "launch",
+            "mainClass": "Comparator.Sort",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
             "name": "Ex1",
             "request": "launch",
             "mainClass": "aula04.Ex1",

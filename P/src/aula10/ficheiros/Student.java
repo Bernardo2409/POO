@@ -2,6 +2,7 @@ package aula10.ficheiros;
 
 import java.util.List;
 
+
 public class Student {
 
     private String name;
@@ -11,6 +12,8 @@ public class Student {
         this.name = name;
         this.grades = grades;
     }
+
+    
 
     public String getName() {
         return name;

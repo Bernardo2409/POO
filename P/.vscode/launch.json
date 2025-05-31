@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ContactsTester",
+            "request": "launch",
+            "mainClass": "Learning12.ContactsTester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
             "name": "OrdenarDiasSemana",
             "request": "launch",
             "mainClass": "Comparator.OrdenarDiasSemana",

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PlaneTester",
+            "request": "launch",
+            "mainClass": "Remakeaula9.Ex2.PlaneTester",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "ALDemo",
+            "request": "launch",
+            "mainClass": "Remakeaula9.Ex1.ALDemo",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
             "name": "Solution",
             "request": "launch",
             "mainClass": "Comparator.Solution",

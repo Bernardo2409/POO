@@ -5,11 +5,12 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 public class ContactManager implements IContactCostCalculator {
 
-    private int conections;
     private ArrayList<Contact> contacts = new ArrayList<>();
 
     public void addContact(Contact c) {
@@ -74,6 +75,34 @@ public class ContactManager implements IContactCostCalculator {
 
             System.out.println(c);
         }
+
+    }
+
+    // sort para Strings
+    public void sortbyname() {
+
+        Collections.sort(contacts, new Comparator<Contact>() {
+
+            public int compare(Contact c1, Contact c2) {
+                return c1.getName().compareTo(c2.getName());
+            }
+            
+        });
+
+        
+    }
+
+    //sort para tudo menos Strings
+    public void sortbyphone() {
+
+        Collections.sort(contacts, new Comparator<Contact>() {
+
+            public int compare(Contact c1, Contact c2) {
+                return (Double.compare(c1.getPhone(), c2.getPhone()));
+
+            }
+            
+        });
 
     }
 

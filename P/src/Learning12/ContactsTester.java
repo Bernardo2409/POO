@@ -1,7 +1,5 @@
 package Learning12;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class ContactsTester {
 
@@ -40,6 +38,15 @@ public class ContactsTester {
         System.out.println(c2);
         System.out.println(cm.getContact(5));
         System.out.println(cm.calculateContactCost());
+
+        System.out.println("---------------------------- Sort by Name -----------------------------");
+        
+        cm.sortbyname();
+        cm.printAllContacts();
+        System.out.println("---------------------------- Sort by Phone -----------------------------");
+        cm.sortbyphone();
+        cm.printAllContacts();
+        
         // --------------------------
 
         cm.writeFile("src\\Learning12\\out.txt");

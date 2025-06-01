@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Comparator.Solution",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
+            "name": "ComparatorDemo",
+            "request": "launch",
+            "mainClass": "Comparator.ComparatorDemo",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
             "name": "ContactsTester",
             "request": "launch",
             "mainClass": "Learning12.ContactsTester",

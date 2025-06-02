@@ -92,7 +92,7 @@ public class POO1920EN {
 		//  lista todos os produtos, com precos, numa tabela
 		out.println(loja); 
 		out.println();
-		System.out.println(loja.reorder());
+		loja.reorder();
 		
 		
 		// informacao sobre alguns produtos
@@ -121,7 +121,7 @@ public class POO1920EN {
 
 			// TODO:  COMPLETAR ...
 			
-			try (Scanner sc = new Scanner(new File("epoo20.txt"))) {
+			try (Scanner sc = new Scanner(new File("\\src\\Exame19_20\\epoo20.txt"))) {
 				String[] line;
 				Telemovel temp1;
 				Electrodomestico temp2;

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "POO1920EN",
+            "request": "launch",
+            "mainClass": "Exame19_20.Ex1.POO1920EN",
+            "projectName": "P_f7846dc2"
+        },
+        {
+            "type": "java",
             "name": "PlaneTester",
             "request": "launch",
             "mainClass": "Remakeaula9.Ex2.PlaneTester",

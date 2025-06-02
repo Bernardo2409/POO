@@ -6,23 +6,24 @@ public class Telemovel extends Produto {
 
     public Telemovel(String codigo, int quantidade, double preco_base, String marca, String modelo,
             HashSet<String> notas) {
-        super(codigo, quantidade, preco_base);
+        super(codigo, quantidade, preco_base, 'E');
         this.marca = marca;
         this.modelo = modelo;
         this.notas = notas;
     }
 
     public Telemovel(double preco_base, String marca, String modelo, HashSet<String> notas) {
-        super(preco_base);
+        super(preco_base, 'E');
         this.marca = marca;
         this.modelo = modelo;
         this.notas = notas;
     }
 
     public Telemovel (String marca, String modelo, double preco_base) {
-        super(preco_base);
+        super(preco_base, 'E');
         this.marca = marca;
         this.modelo = modelo;
+        this.notas = new HashSet<>();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class Telemovel extends Produto {
     private String marca;
     private String modelo;
     private HashSet<String> notas;
+    private ClasseEnergetica classe;
 
     
 
@@ -63,5 +65,10 @@ public class Telemovel extends Produto {
     public void addNota(String nota) {
 
         notas.add(nota);
+    }
+
+    public void setClasse(ClasseEnergetica classe){
+
+        this.classe = classe;
     }
 }

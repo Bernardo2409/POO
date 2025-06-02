@@ -11,14 +11,14 @@ public class Livro extends Produto {
     private List<Autor> autores;
     
     public Livro(String codigo, int quantidade, double preco_base, String titulo, HashSet<String> autores) {
-        super(codigo, quantidade, preco_base);
+        super(codigo, quantidade, preco_base, 'L');
         this.titulo = titulo;
         this.autores = new ArrayList<>();
     }
 
     public Livro(String titulo, double preco_base) {
 
-        super(preco_base);
+        super(preco_base, 'L');
         this.titulo = titulo;
         this.autores = new ArrayList<>();
 
@@ -26,10 +26,12 @@ public class Livro extends Produto {
 
     public Livro( String titulo, double preco_base, List<Autor> autores) {
 
-        super(preco_base);
+        super(preco_base, 'L');
         this.titulo = titulo;
-        this.autores = new ArrayList<>();
+        this.autores = autores;
     }
+
+    
 
     public String getTitulo() {
         return titulo;
@@ -51,15 +53,21 @@ public class Livro extends Produto {
         quantidade = stock;
     }
 
-    public void addStock(int quantidade_adicionada) {
+    public List<Autor> autores() {
 
-        quantidade += quantidade_adicionada;
-        
+
+        return getLista();
     }
 
     public int numeroAutores() {
 
-        return getLista().size();
+        int qua = 0;
+
+        for (Autor a : autores) {
+            qua += 1;
+
+        }
+        return qua;
     }
 
     public void add(Autor a) {

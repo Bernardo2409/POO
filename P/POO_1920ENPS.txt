@@ -1,0 +1,19 @@
+
+Alinea 1) ----------------------------------
+
+Livro 1 tem 4 autores
+Livro 2 tem 3 autores
+TOTAL DE PRODUTOS DO MERCADO: 0
+Descricao de electr1 :Frigorifico:Bosch/XPTO
+AUTORES DE Livro 1: [[Autor 1 (2000-), [Autor 2 (2000-), [Autor 3 (2010-), [Autor 4 (2018-)]
+TOTAL DE PRODUTOS DO MERCADO: 562
+Unidades insuficientes! So tem 3 em stock.
+Vendidos 100 unidades de "Livro 2". Passou a ter 351
+TOTAL DE PRODUTOS DO MERCADO: 462
+
+Loja ePOO -  Loja Online
+
+Informacao sobre Frigorifico:
+ElectrodomesticoProduto [codigo=E1016, quantidade=1, preco_base=780.0]
+Informacao sobre Telemovel:
+TelemovelTelemovel [marca=Motorola, modelo=XWZ Model A, notas=[Melhor Compra 2019, Em promocao]]

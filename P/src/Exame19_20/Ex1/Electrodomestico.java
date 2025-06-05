@@ -1,6 +1,5 @@
 package Exame19_20.Ex1;
 
-import java.lang.annotation.ElementType;
 
 
 public class Electrodomestico extends Produto {
